@@ -40,13 +40,19 @@ actions:
       - hostapd
       - wireless-regdb
       - iw
-      - firmware-mediatek
-      - firmware-misc-nonfree
       - vim
       - curl
       - openssh-server
       - iproute2
       - initramfs-tools
+
+  - action: apt
+    description: Install firmware
+    update: false
+    recommends: false
+    packages:
+      - firmware-mediatek
+      - firmware-misc-nonfree
 
 {{ if eq $kernel "local" }}
   - action: overlay
