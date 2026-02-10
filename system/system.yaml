@@ -33,6 +33,36 @@ actions:
       - udev
 
   - action: apt
+    description: Install various Important packages
+    update: false
+    recommends: true
+    packages:
+      - adduser
+      - apt-utils
+      - cpio
+      - debconf-i18n
+      - debian-archive-keyring
+      - dhcpcd-base
+      - e2fsprogs
+      - fdisk
+      - ifupdown
+      - init
+      - iproute2
+      - iputils-ping
+      - kmod
+      - less
+      - linux-sysctl-defaults
+      - logrotate
+      - nano
+      - netbase
+      - nftables
+      - procps
+      - readline-common
+      - sensible-utils
+      - vim
+      - whiptail
+
+  - action: apt
     description: Install other tools
     update: false
     recommends: true
@@ -40,10 +70,8 @@ actions:
       - hostapd
       - wireless-regdb
       - iw
-      - vim
       - curl
       - openssh-server
-      - iproute2
       - initramfs-tools
 
   - action: apt
